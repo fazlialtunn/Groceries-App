@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		FB939E572B8105E700E84C1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB939E562B8105E700E84C1A /* AppDelegate.swift */; };
 		FB939E592B8105E700E84C1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB939E582B8105E700E84C1A /* SceneDelegate.swift */; };
-		FB939E5B2B8105E700E84C1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB939E5A2B8105E700E84C1A /* ViewController.swift */; };
-		FB939E5E2B8105E700E84C1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB939E5C2B8105E700E84C1A /* Main.storyboard */; };
+		FB939E5B2B8105E700E84C1A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB939E5A2B8105E700E84C1A /* WelcomeViewController.swift */; };
 		FB939E602B8105E900E84C1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB939E5F2B8105E900E84C1A /* Assets.xcassets */; };
 		FB939E632B8105E900E84C1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB939E612B8105E900E84C1A /* LaunchScreen.storyboard */; };
+		FB939E712B8107B000E84C1A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB939E702B8107B000E84C1A /* Router.swift */; };
+		FB939E742B8107CC00E84C1A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB939E732B8107CC00E84C1A /* UIView+Extension.swift */; };
+		FB939E762B8107D600E84C1A /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB939E752B8107D600E84C1A /* Color+Extension.swift */; };
+		FB939E782B8107D900E84C1A /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB939E772B8107D900E84C1A /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB939E532B8105E700E84C1A /* Groceries App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Groceries App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB939E562B8105E700E84C1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB939E582B8105E700E84C1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB939E5A2B8105E700E84C1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FB939E5D2B8105E700E84C1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB939E5A2B8105E700E84C1A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FB939E5F2B8105E900E84C1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB939E622B8105E900E84C1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB939E642B8105E900E84C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB939E702B8107B000E84C1A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FB939E732B8107CC00E84C1A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FB939E752B8107D600E84C1A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		FB939E772B8107D900E84C1A /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,66 @@
 		FB939E552B8105E700E84C1A /* Groceries App */ = {
 			isa = PBXGroup;
 			children = (
+				FB939E6F2B81079D00E84C1A /* Router */,
+				FB939E6E2B81079500E84C1A /* Helpers */,
+				FB939E6C2B81065600E84C1A /* Model */,
+				FB939E6B2B81065100E84C1A /* View */,
+				FB939E6A2B81064600E84C1A /* ViewModel */,
 				FB939E562B8105E700E84C1A /* AppDelegate.swift */,
 				FB939E582B8105E700E84C1A /* SceneDelegate.swift */,
-				FB939E5A2B8105E700E84C1A /* ViewController.swift */,
-				FB939E5C2B8105E700E84C1A /* Main.storyboard */,
 				FB939E5F2B8105E900E84C1A /* Assets.xcassets */,
 				FB939E612B8105E900E84C1A /* LaunchScreen.storyboard */,
 				FB939E642B8105E900E84C1A /* Info.plist */,
 			);
 			path = "Groceries App";
+			sourceTree = "<group>";
+		};
+		FB939E6A2B81064600E84C1A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FB939E6B2B81065100E84C1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FB939E6D2B81065F00E84C1A /* Controllers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB939E6C2B81065600E84C1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB939E6D2B81065F00E84C1A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB939E5A2B8105E700E84C1A /* WelcomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FB939E6E2B81079500E84C1A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FB939E732B8107CC00E84C1A /* UIView+Extension.swift */,
+				FB939E752B8107D600E84C1A /* Color+Extension.swift */,
+				FB939E772B8107D900E84C1A /* Images.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FB939E6F2B81079D00E84C1A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FB939E702B8107B000E84C1A /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +184,6 @@
 			files = (
 				FB939E632B8105E900E84C1A /* LaunchScreen.storyboard in Resources */,
 				FB939E602B8105E900E84C1A /* Assets.xcassets in Resources */,
-				FB939E5E2B8105E700E84C1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB939E5B2B8105E700E84C1A /* ViewController.swift in Sources */,
+				FB939E782B8107D900E84C1A /* Images.swift in Sources */,
+				FB939E712B8107B000E84C1A /* Router.swift in Sources */,
+				FB939E762B8107D600E84C1A /* Color+Extension.swift in Sources */,
+				FB939E5B2B8105E700E84C1A /* WelcomeViewController.swift in Sources */,
 				FB939E572B8105E700E84C1A /* AppDelegate.swift in Sources */,
+				FB939E742B8107CC00E84C1A /* UIView+Extension.swift in Sources */,
 				FB939E592B8105E700E84C1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +207,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FB939E5C2B8105E700E84C1A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB939E5D2B8105E700E84C1A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FB939E612B8105E900E84C1A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +349,7 @@
 				INFOPLIST_FILE = "Groceries App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +377,7 @@
 				INFOPLIST_FILE = "Groceries App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

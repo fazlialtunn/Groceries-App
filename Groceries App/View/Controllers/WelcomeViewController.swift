@@ -32,7 +32,7 @@ class WelcomeViewController: UIViewController {
     private lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.font = UIFont.systemFont(ofSize: 42, weight: .bold)
-        titleLabel.text = "Welcome to our store"
+        titleLabel.text = "Welcome To Our Store"
         titleLabel.textColor = .white
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
@@ -63,7 +63,7 @@ class WelcomeViewController: UIViewController {
     }()
     
     @objc func didTapStartButton() {
-        
+        router.pushCategoriesVC()   
     }
     
     required init?(coder: NSCoder) {
@@ -73,12 +73,34 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        setupLayout()
+    }
+    
+    private func setupLayout() {
         view.addSubview(backgroundImage)
         view.addSubview(logoView)
         view.addSubview(titleLabel)
         view.addSubview(descriptionLabel)
         view.addSubview(startButton)
         backgroundImage.pinToEdges(of: view)
+        
+        NSLayoutConstraint.activate([
+            //Logo View
+            logoView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logoView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -40),
+            //Title Label
+            titleLabel.bottomAnchor.constraint(equalTo: descriptionLabel.topAnchor, constant: -20),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
+            //Description Label
+            descriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            descriptionLabel.bottomAnchor.constraint(equalTo: startButton.topAnchor, constant: -40),
+            //Start Button
+            startButton.heightAnchor.constraint(equalToConstant: 67),
+            startButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            startButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            startButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -90),
+        ])
     }
 }
 
